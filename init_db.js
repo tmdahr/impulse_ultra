@@ -1,5 +1,5 @@
 const mysql = require('mysql2/promise');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const dbConfig = {
     host: 'svc.sel3.cloudtype.app', // MySQL 서버 주소
