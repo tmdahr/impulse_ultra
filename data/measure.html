@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="measure-page">
+    <div class="header">
+        <div class="title-area">
+            <h1>Measure</h1>
+            <p class="sub">START를 눌러 측정을 시작하세요.</p>
+        </div>
+        
+        <div class="top-bar">
+            <button class="main-btn" onclick="gomain()">main</button>
+            <img src="images/logo.png" class="logo-img">
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="panel">
+            <div class="panel-top">
+                <div class="btn-group">
+                    <button class="btn start-btn" onclick="startMeasure()">Start</button>
+                    <button class="btn reset-btn" onclick="resetMeasure()">Reset</button>
+                </div>
+                <div class="score-box" id="score">0p</div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="info-container">
+                <div class="info-box">
+                    <div class="info-title">최근 측정</div>
+                    <div id="recent" class="empty">측정 기록이 없습니다.</div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-title">기록</div>
+                    <div id="avg" class="empty">측정 기록이 없습니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-area">
+            <img src="images/bg2.png" class="right-img" id="randomBg">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

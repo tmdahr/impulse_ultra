@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+    <div class="container">
+        <!-- 좌측 로그인 패널 -->
+        <div class="left-panel">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" class="logo-image">
+            </div>
+            
+            <div style="margin-left: 70px;">
+                <h1>Login</h1>
+                <p class="welcome">Welcome</p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" id="idInput" placeholder="Please enter your ID" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Please enter your password" required>
+                    </div>
+
+                    <button type="submit" class="login-btn" style="display: block; margin: 0 auto;">
+                        Login
+                        <span class="spinner"></span>
+                    </button>
+                </form>
+
+                <div id="signupLink" style="text-align: center; margin-top: 20px;">
+                    <button onclick="showRegisterForm()" style="background: none; border: none; color: #007BFF; cursor: pointer; text-decoration: underline;">Sign up</button>
+                </div>
+
+                <form id="registerForm" style="display: none;">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" id="regIdInput" placeholder="사용자 ID (3자 이상)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="regPassword" placeholder="비밀번호 (6자 이상)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" placeholder="비밀번호 확인" required>
+                    </div>
+
+                    <button type="submit" class="login-btn" style="display: block; margin: 0 auto;">
+                        Sign up
+                        <span class="spinner"></span>
+                    </button>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <button type="button" onclick="showLoginForm()" style="background: none; border: none; color: #007BFF; cursor: pointer; text-decoration: underline; font-size: 12px;">Back to Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 우측 애니메이션 패널 -->
+        <div class="right-panel">
+            <div class="ultra-text">
+                <img src="images/ultra.png" alt="Ultra" class="ultra-image">
+            </div>
+            <div class="fist-container">
+                <img src="images/punch.png" alt="Fist" class="fist-image">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
